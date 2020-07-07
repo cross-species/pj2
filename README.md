@@ -60,6 +60,9 @@ hugo server
 Since the **Git cache of theme `academic`** comflict with the **Git of our main part**, we need to remove it for `git commit`.
 ```bash
 rm -rf ./themes/academic
+git add .
+git commit -m "<your commit name>"
+git push
 ```
 
 The site will be ready after a while in `http://localhost:1313`.
