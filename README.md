@@ -59,7 +59,7 @@ hugo server
 3. Git commit: 
 Since the theme academic's cache comflict with the git-info of our main part, we need to remove it for `git push`.
 ```bash
-git rm --cached themes/academic
+rm -rf ./themes/academic
 ```
 
 The site will be ready after a while in `http://localhost:1313`.
