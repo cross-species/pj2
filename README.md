@@ -43,13 +43,13 @@ git clone https://github.com/cross-species/pj2.git
 cd pj2
 ```
 *Note:*
-We assume you are looking for the master module so you can make your own submodule.
+We assume you are looking for the `master` module so you can make your own submodule.
 If not, update all the submodules:
 ```bash
 git submodule update --init --recursive
 ```
 
-2. Run the following command:
+2. Install the theme and run the server:
 ```bash
 # Since we have removed the academic theme for `git commit` but hugo needs theme, we need to reinstall it.
 git clone https://github.com/gcushen/hugo-academic.git themes/academic
@@ -57,7 +57,7 @@ hugo server
 ```
 
 3. Git commit: 
-Since the **Git cache of theme `academic`** comflict with the **Git of our main part**, we need to remove it for `git commit`.
+Since the **Git cache of theme `academic`** comflict with the **Git of our main part `master`**, we need to remove it for `git commit`.
 ```bash
 rm -rf ./themes/academic
 git add .
@@ -71,7 +71,7 @@ The site will be ready after a while in `http://localhost:1313`.
 
 If you have any questions or feature requests, please feel free to submit an issue.
 
-For developers, the `Git` is **necessary**, but the `Hugo` is **not necessary** if you do not want to view the site locally or generate some pages automatically, follow our [Contributing Guide](https://github.com/cross-species/pj2/blob/master/xlab-website/CONTRIBUTING.zh-CN.md) will undoubtedly lead you making changes to our site!
+For developers, the `Git` is **necessary**, but the `Hugo` is **not necessary** if you do not want to view the site locally or generate some pages automatically, follow our [Contributing Guide][CONTRIBUTING_PATH] will undoubtedly lead you making changes to our site!
 
 
 [git-install]: https://git-scm.com/downloads
@@ -79,3 +79,5 @@ For developers, the `Git` is **necessary**, but the `Hugo` is **not necessary** 
 [hugo-install]: https://gohugo.io/getting-started/installing/#quick-install
 
 [hugo-version]: https://github.com/gohugoio/hugo/releases
+
+[CONTRIBUTING_PATH]: ./CONTRIBUTING.zh-CN.md
