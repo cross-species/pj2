@@ -16,3 +16,57 @@ The code are mainly based on [X-lab website](https://github.com/X-lab2017/xlab-w
 - **内容**：给出一个CMS的半成品（[X-lab](https://github.com/X-lab2017/xlab-website)），在此基础上，根据小组的偏好，将其做成一个相对完整的内容系统。
 - **技能点**：代码类在线多人协作、敏捷设计思维过程
 - **完成节点**：7月20日
+
+## Guide
+
+### Prerequisites
+
+* **Software**: [Git][git-install], and [Hugo][hugo-install]. As an example of working configuration:
+```bash
+$ git --version
+$ git version 2.23.0
+$ hugo version
+$ Hugo Static Site Generator v0.72.0-8A7EF3CF/extended darwin/amd64 BuildDate: 2020-05-31T12:12:33Z
+```
+
+* **Hardware**: 2 CPUs, 8GB memory RAM.
+
+### Getting started
+
+Make sure that you have installed `Git` and `Hugo`, **in particular**, you must install Hugo with its [extended_0.65+ version][hugo-version]. And then set
+
+Steps:
+
+1. Clone this project
+```bash
+$ git clone git@github.com:X-lab2017/xlab-website.git
+```
+
+2. Go to the project folder
+```
+$ cd xlab-website
+```
+
+3. Run the following command:
+```bash
+$ rm -r themes/academic/
+$ git submodule update --init --recursive
+$ # Since we have removed the academic theme and hugo needs theme, we reinstall it.
+$ git clone https://github.com/gcushen/hugo-academic.git themes/academic
+$ hugo server
+```
+
+The site will be ready after a while in `http://localhost:1313`.
+
+## Support
+
+If you have any questions or feature requests, please feel free to submit an issue.
+
+For developers, the `Git` is **necessary**, but the `Hugo` is **not necessary** if you do not want to view the site locally or generate some pages automatically, follow our [Contributing Guide](https://github.com/cross-species/pj2/blob/master/xlab-website/CONTRIBUTING.zh-CN.md) will undoubtedly lead you making changes to our site!
+
+
+[git-install]: https://git-scm.com/downloads
+
+[hugo-install]: https://gohugo.io/getting-started/installing/#quick-install
+
+[hugo-version]: https://github.com/gohugoio/hugo/releases
