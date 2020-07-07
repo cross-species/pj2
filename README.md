@@ -49,13 +49,17 @@ If not, update all your project's submodules:
 $ git submodule update --init --recursive
 ```
 
-
 2. Run the following command:
 ```bash
-$ rm -r themes/academic/
-$ # Since we have removed the academic theme and hugo needs theme, we reinstall it.
+$ # Since we have removed the academic theme for git push and hugo needs theme, we then reinstall it.
 $ git clone https://github.com/gcushen/hugo-academic.git themes/academic
 $ hugo server
+```
+
+3. Git commit: 
+Since the theme academic's cache comflict with the git-info of our main part, we need to remove it for `git push`.
+```bash
+$ rm -rf ./themes/academic
 ```
 
 The site will be ready after a while in `http://localhost:1313`.
