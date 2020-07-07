@@ -23,10 +23,8 @@ The code are mainly based on [X-lab website](https://github.com/X-lab2017/xlab-w
 
 * **Software**: [Git][git-install], and [Hugo][hugo-install]. As an example of working configuration:
 ```bash
-$ git --version
-$ git version 2.23.0
-$ hugo version
-$ Hugo Static Site Generator v0.72.0-8A7EF3CF/extended darwin/amd64 BuildDate: 2020-05-31T12:12:33Z
+git --version
+hugo version
 ```
 
 * **Hardware**: 2 CPUs, 8GB memory RAM.
