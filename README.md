@@ -37,20 +37,22 @@ Make sure that you have installed `Git` and `Hugo`, **in particular**, you must 
 
 Steps:
 
-1. Clone this project
+1. Clone this project & get into it
 ```bash
-$ git clone git@github.com:X-lab2017/xlab-website.git
+$ git clone https://github.com/cross-species/pj2.git
+$ cd pj2
+```
+*Note:*
+We assume your project is the original one so you can make your own submodule.
+If not, update all your project's submodules:
+```bash
+$ git submodule update --init --recursive
 ```
 
-2. Go to the project folder
-```
-$ cd xlab-website
-```
 
-3. Run the following command:
+2. Run the following command:
 ```bash
 $ rm -r themes/academic/
-$ git submodule update --init --recursive
 $ # Since we have removed the academic theme and hugo needs theme, we reinstall it.
 $ git clone https://github.com/gcushen/hugo-academic.git themes/academic
 $ hugo server
