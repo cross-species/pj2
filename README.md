@@ -39,27 +39,27 @@ Steps:
 
 1. Clone this project & get into it
 ```bash
-$ git clone https://github.com/cross-species/pj2.git
-$ cd pj2
+git clone https://github.com/cross-species/pj2.git
+cd pj2
 ```
 *Note:*
-We assume your project is the original one so you can make your own submodule.
-If not, update all your project's submodules:
+We assume you are looking for the master module so you can make your own submodule.
+If not, update all the submodules:
 ```bash
-$ git submodule update --init --recursive
+git submodule update --init --recursive
 ```
 
 2. Run the following command:
 ```bash
-$ # Since we have removed the academic theme for git push and hugo needs theme, we then reinstall it.
-$ git clone https://github.com/gcushen/hugo-academic.git themes/academic
-$ hugo server
+# Since we have removed the academic theme for git push and hugo needs theme, we then reinstall it.
+git clone https://github.com/gcushen/hugo-academic.git themes/academic
+hugo server
 ```
 
 3. Git commit: 
 Since the theme academic's cache comflict with the git-info of our main part, we need to remove it for `git push`.
 ```bash
-$ rm -rf ./themes/academic
+git rm --cached themes/academic
 ```
 
 The site will be ready after a while in `http://localhost:1313`.
