@@ -51,13 +51,13 @@ git submodule update --init --recursive
 
 2. Run the following command:
 ```bash
-# Since we have removed the academic theme for git push and hugo needs theme, we then reinstall it.
+# Since we have removed the academic theme for `git commit` but hugo needs theme, we need to reinstall it.
 git clone https://github.com/gcushen/hugo-academic.git themes/academic
 hugo server
 ```
 
 3. Git commit: 
-Since the theme academic's cache comflict with the git-info of our main part, we need to remove it for `git push`.
+Since the **Git cache of theme `academic`** comflict with the **Git of our main part**, we need to remove it for `git commit`.
 ```bash
 rm -rf ./themes/academic
 ```
